@@ -22,6 +22,19 @@
 
 			gtag('config', 'UA-115818861-1');
 		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+							// iOS web app full screen hacks.
+							if(window.navigator.standalone == true) {
+											// make all link remain in web app mode.
+											$('a').click(function() {
+															window.location = $(this).attr('href');
+									return false;
+											});
+							}
+			});
+			</script>
 		<script language="JavaScript" src="./assets/js/gen_validatorv31.js" type="text/javascript"></script>
 
 	</head>
@@ -62,9 +75,17 @@
 						<a href="./">Home</a>
 					</li>
 					<li>
-						<a href="./aboutus/">About Us</a>
+						<a href="./lock_screen/">Lock Screen</a>
 					</li>
-					<!--li><a href="generic.html">Tempus etiam</a></li> <li><a href="generic.html">Consequat dolor</a></li> <li><a href="elements.html">Elements</a></li-->
+					<li>
+						<a href="https://play.google.com/store/apps/details?id=co.escapehome.escapehome.app">Android App</a>
+					</li>
+					<li>
+						<a href="./iphone_app/">iPhone & iPad App</a>
+					</li>
+					<li>
+						<a href="./hints_and_tips/">Hints & Tips</a>
+					</li>
 				</ul>
 			</nav>
 
@@ -79,91 +100,44 @@
 					<h1thin>your guide for DIY escape rooms you can play at home!</h1thin>
 				</br>
 			</br>
-			<p>Each of our 'EscapeHomes' can be simply set up, and should be able to be completed by one person - so they're perfect for a date night or a game evening with some friends! We try to use items that you would find around your home, and we test each
-				guide on one another before uploading it. We hope you enjoy these as much as we do! We're just starting out with these guides, and will become more creative with practise and feedback :)
-			</p>
-			<p>
-				Each guide starts with an introduction, the items you will need and how the player should progress through the game. We then have step-by-step instructions on how to set up the EscapeHome, often in the reverse order of how it should be played. For
-				most guides you will at least need a pen, paper, scissors and sellotape, and many will need other items - but feel free to adapt and substitute these to suit what you have! We find that these EscapeHomes work best if you act as a 'game master' for
-				the players, giving hints and helps if needed.
-			</p>
-		</header>
-		<section class="tiles">
-			<article class="style1">
-				<span class="image">
-					<img src="images/pic01.jpg" alt=""/>
-				</span>
-				<a href="./guides/first_guide/">
-					<h2>First Guide</h2>
-					<div class="content"></br>
-					<div class="box alt">
-						<div class="row uniform">
-							<div class="5u" style="text-align:right">
-								<i class="fas fa-pencil-alt" style="font-size:1.05em; color:Tomato"></i>
-								<i class="fas fa-pencil-alt" style="font-size:1.05em; color:Tomato"></i>
-								<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#CCCCCC"></i>
-								<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#CCCCCC"></i>
-								<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#CCCCCC"></i>
-							</div>
-							<div class="7u$">
-								Quite easy to setup
-							</div>
-						</div>
-						<div class="row uniform">
-							<div class="5u" style="text-align:right">
-								<i class="fab fa-searchengin" style="font-size:1.1em; color:Tomato"></i>
-								<i class="fab fa-searchengin" style="font-size:1.1em; color:Tomato"></i>
-								<i class="fab fa-searchengin" style="font-size:1.1em; color:#CCCCCC"></i>
-								<i class="fab fa-searchengin" style="font-size:1.1em; color:#CCCCCC"></i>
-								<i class="fab fa-searchengin" style="font-size:1.1em; color:#CCCCCC"></i>
-							</div>
-							<div class="7u$">
-								Quite easy to play
-							</div>
-						</div>
-						<div class="row uniform">
-							<div class="5u" style="text-align:right">
-								<i class="fas fa-clock" style="font-size:1.05em; color:Tomato"></i>
-								<i class="fas fa-clock" style="font-size:1.05em; color:Tomato"></i>
-								<i class="far fa-clock" style="font-size:1.05em; color:#CCCCCC"></i>
-								<i class="far fa-clock" style="font-size:1.05em; color:#CCCCCC"></i>
-								<i class="far fa-clock" style="font-size:1.05em; color:#CCCCCC"></i>
-							</div>
-							<div class="7u$">
-								About 15 min to finish
-							</div>
-						</div>
-					</div>
-				</div>
-			</a>
-		</article>
-		<article class="style2">
+		</br>
+		<p>Each of our 'EscapeHomes' can be simply set up, and are great for a date night, a game evening with some friends, or entertaining kids! We try to use items that you would find around your home, and we test each guide before uploading it. We hope
+			you enjoy these as much as we do! We're just getting started, and will become more creative with practise and feedback :)
+		</p>
+		<p>
+			Each guide starts with an introduction, the items you will need and how the player should progress through the game. We then have step-by-step instructions on how to set up the EscapeHome, often in the reverse order of how it should be played. For
+			most guides you will need a pen, paper, scissors and sellotape, and many will require other items - but feel free to adapt and substitute these to suit what you have!</p>
+		<p>We find that these EscapeHomes work best if you act as a 'game master' for the players, giving hints and help if needed.
+		</p>
+	</header>
+	<section class="tiles">
+		<article class="style1">
 			<span class="image">
-				<img src="images/pic02.jpg" alt=""/>
+				<img src="images/pic01.jpg" alt="" style="height: 15em"/>
 			</span>
-			<a href="./guides/second_guide/">
-				<h2>Second Guide</h2>
+			<a href="./guides/guide_1/">
+				<h2>#1 - The Original</h2>
 				<div class="content"></br>
 				<div class="box alt">
 					<div class="row uniform">
 						<div class="5u" style="text-align:right">
-							<i class="fas fa-pencil-alt" style="font-size:1.05em; color:Tomato"></i>
-							<i class="fas fa-pencil-alt" style="font-size:1.05em; color:Tomato"></i>
-							<i class="fas fa-pencil-alt" style="font-size:1.05em; color:Tomato"></i>
-							<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#CCCCCC"></i>
-							<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#CCCCCC"></i>
+							<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#FFFFFF"></i>
+							<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#FFFFFF"></i>
+							<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#888888"></i>
+							<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#888888"></i>
+							<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#888888"></i>
 						</div>
 						<div class="7u$">
-							Not too hard to setup
+							Quite easy to setup
 						</div>
 					</div>
 					<div class="row uniform">
 						<div class="5u" style="text-align:right">
-							<i class="fab fa-searchengin" style="font-size:1.1em; color:Tomato"></i>
-							<i class="fab fa-searchengin" style="font-size:1.1em; color:Tomato"></i>
-							<i class="fab fa-searchengin" style="font-size:1.1em; color:#CCCCCC"></i>
-							<i class="fab fa-searchengin" style="font-size:1.1em; color:#CCCCCC"></i>
-							<i class="fab fa-searchengin" style="font-size:1.1em; color:#CCCCCC"></i>
+							<i class="fab fa-searchengin" style="font-size:1.1em; color:#FFFFFF"></i>
+							<i class="fab fa-searchengin" style="font-size:1.1em; color:#FFFFFF"></i>
+							<i class="fab fa-searchengin" style="font-size:1.1em; color:#888888"></i>
+							<i class="fab fa-searchengin" style="font-size:1.1em; color:#888888"></i>
+							<i class="fab fa-searchengin" style="font-size:1.1em; color:#888888"></i>
 						</div>
 						<div class="7u$">
 							Quite easy to play
@@ -171,11 +145,11 @@
 					</div>
 					<div class="row uniform">
 						<div class="5u" style="text-align:right">
-							<i class="fas fa-clock" style="font-size:1.05em; color:Tomato"></i>
-							<i class="fas fa-clock" style="font-size:1.05em; color:Tomato"></i>
-							<i class="far fa-clock" style="font-size:1.05em; color:#CCCCCC"></i>
-							<i class="far fa-clock" style="font-size:1.05em; color:#CCCCCC"></i>
-							<i class="far fa-clock" style="font-size:1.05em; color:#CCCCCC"></i>
+							<i class="fas fa-clock" style="font-size:1.05em; color:#FFFFFF"></i>
+							<i class="fas fa-clock" style="font-size:1.05em; color:#FFFFFF"></i>
+							<i class="far fa-clock" style="font-size:1.05em; color:#888888"></i>
+							<i class="far fa-clock" style="font-size:1.05em; color:#888888"></i>
+							<i class="far fa-clock" style="font-size:1.05em; color:#888888"></i>
 						</div>
 						<div class="7u$">
 							About 15 min to finish
@@ -185,21 +159,167 @@
 			</div>
 		</a>
 	</article>
+
+		<article class="style2">
+			<span class="image">
+				<img src="images/pic02.jpg" alt="" style="height: 15em"/>
+			</span>
+			<a href="./guides/guide_2/">
+				<h2>#2 - The Experiment</h2>
+				<div class="content"></br>
+				<div class="box alt">
+					<div class="row uniform">
+						<div class="5u" style="text-align:right">
+							<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#FFFFFF"></i>
+							<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#FFFFFF"></i>
+							<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#FFFFFF"></i>
+							<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#FFFFFF"></i>
+							<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#888888"></i>
+						</div>
+						<div class="7u$">
+							A bit tricky to setup
+						</div>
+					</div>
+					<div class="row uniform">
+						<div class="5u" style="text-align:right">
+							<i class="fab fa-searchengin" style="font-size:1.1em; color:#FFFFFF"></i>
+							<i class="fab fa-searchengin" style="font-size:1.1em; color:#FFFFFF"></i>
+							<i class="fab fa-searchengin" style="font-size:1.1em; color:#FFFFFF"></i>
+							<i class="fab fa-searchengin" style="font-size:1.1em; color:#FFFFFF"></i>
+							<i class="fab fa-searchengin" style="font-size:1.1em; color:#888888"></i>
+						</div>
+						<div class="7u$">
+							Pretty hard to play
+						</div>
+					</div>
+					<div class="row uniform">
+						<div class="5u" style="text-align:right">
+							<i class="fas fa-clock" style="font-size:1.05em; color:#FFFFFF"></i>
+							<i class="fas fa-clock" style="font-size:1.05em; color:#FFFFFF"></i>
+							<i class="fas fa-clock" style="font-size:1.05em; color:#FFFFFF"></i>
+							<i class="fas fa-clock" style="font-size:1.05em; color:#FFFFFF"></i>
+							<i class="far fa-clock" style="font-size:1.05em; color:#888888"></i>
+						</div>
+						<div class="7u$">
+							About 45 min to finish
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</article>
 	<article class="style3">
 		<span class="image">
-			<img src="images/pic03.jpg" alt=""/>
+			<img src="images/pic03.jpg" alt="" style="height: 15em"/>
 		</span>
-		<a href="./guides/third_guide/">
-			<h2>Third Guide</h2>
+		<a href="./guides/guide_3/">
+			<h2>#3 - The Speedy</h2>
 			<div class="content"></br>
+				<div class="box alt">
+					<div class="row uniform">
+						<div class="5u" style="text-align:right">
+							<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#FFFFFF"></i>
+							<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#FFFFFF"></i>
+							<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#FFFFFF"></i>
+							<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#888888"></i>
+							<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#888888"></i>
+						</div>
+						<div class="7u$">
+							Not too hard to setup
+						</div>
+					</div>
+					<div class="row uniform">
+						<div class="5u" style="text-align:right">
+							<i class="fab fa-searchengin" style="font-size:1.1em; color:#FFFFFF"></i>
+							<i class="fab fa-searchengin" style="font-size:1.1em; color:#FFFFFF"></i>
+							<i class="fab fa-searchengin" style="font-size:1.1em; color:#888888"></i>
+							<i class="fab fa-searchengin" style="font-size:1.1em; color:#888888"></i>
+							<i class="fab fa-searchengin" style="font-size:1.1em; color:#888888"></i>
+						</div>
+						<div class="7u$">
+							Quite easy to play
+						</div>
+					</div>
+					<div class="row uniform">
+						<div class="5u" style="text-align:right">
+							<i class="fas fa-clock" style="font-size:1.05em; color:#FFFFFF"></i>
+							<i class="fas fa-clock" style="font-size:1.05em; color:#FFFFFF"></i>
+							<i class="far fa-clock" style="font-size:1.05em; color:#888888"></i>
+							<i class="far fa-clock" style="font-size:1.05em; color:#888888"></i>
+							<i class="far fa-clock" style="font-size:1.05em; color:#888888"></i>
+						</div>
+						<div class="7u$">
+							About 15 min to finish
+						</div>
+					</div>
+				</div>
+		</div>
+	</a>
+</article>
+<article class="style4">
+	<span class="image">
+		<img src="images/pic04.jpg" alt="" style="height: 15em"/>
+	</span>
+	<a href="./guides/guide_4/">
+		<h2>#4 - The Concealed</h2>
+		<div class="content"></br>
+		<div class="box alt">
+			<div class="row uniform">
+				<div class="5u" style="text-align:right">
+					<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#FFFFFF"></i>
+					<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#FFFFFF"></i>
+					<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#FFFFFF"></i>
+					<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#888888"></i>
+					<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#888888"></i>
+				</div>
+				<div class="7u$">
+					Not too hard to setup
+				</div>
+			</div>
+			<div class="row uniform">
+				<div class="5u" style="text-align:right">
+					<i class="fab fa-searchengin" style="font-size:1.1em; color:#FFFFFF"></i>
+					<i class="fab fa-searchengin" style="font-size:1.1em; color:#FFFFFF"></i>
+					<i class="fab fa-searchengin" style="font-size:1.1em; color:#888888"></i>
+					<i class="fab fa-searchengin" style="font-size:1.1em; color:#888888"></i>
+					<i class="fab fa-searchengin" style="font-size:1.1em; color:#888888"></i>
+				</div>
+				<div class="7u$">
+					Quite easy to play
+				</div>
+			</div>
+			<div class="row uniform">
+				<div class="5u" style="text-align:right">
+					<i class="fas fa-clock" style="font-size:1.05em; color:#FFFFFF"></i>
+					<i class="fas fa-clock" style="font-size:1.05em; color:#FFFFFF"></i>
+					<i class="far fa-clock" style="font-size:1.05em; color:#888888"></i>
+					<i class="far fa-clock" style="font-size:1.05em; color:#888888"></i>
+					<i class="far fa-clock" style="font-size:1.05em; color:#888888"></i>
+				</div>
+				<div class="7u$">
+					About 15 min to finish
+				</div>
+			</div>
+		</div>
+	</div>
+</a>
+</article>
+
+<article class="style5">
+	<span class="image">
+		<img src="images/pic05.jpg" alt="" style="height: 15em"/>
+	</span>
+	<a href="./guides/guide_5/">
+		<h2>#5 - The Clever Move</h2>
+		<div class="content"></br>
 			<div class="box alt">
 				<div class="row uniform">
 					<div class="5u" style="text-align:right">
-						<i class="fas fa-pencil-alt" style="font-size:1.05em; color:Tomato"></i>
-						<i class="fas fa-pencil-alt" style="font-size:1.05em; color:Tomato"></i>
-						<i class="fas fa-pencil-alt" style="font-size:1.05em; color:Tomato"></i>
-						<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#CCCCCC"></i>
-						<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#CCCCCC"></i>
+						<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#FFFFFF"></i>
+						<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#FFFFFF"></i>
+						<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#FFFFFF"></i>
+						<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#888888"></i>
+						<i class="fas fa-pencil-alt" style="font-size:1.05em; color:#888888"></i>
 					</div>
 					<div class="7u$">
 						Not too hard to setup
@@ -207,11 +327,11 @@
 				</div>
 				<div class="row uniform">
 					<div class="5u" style="text-align:right">
-						<i class="fab fa-searchengin" style="font-size:1.1em; color:Tomato"></i>
-						<i class="fab fa-searchengin" style="font-size:1.1em; color:Tomato"></i>
-						<i class="fab fa-searchengin" style="font-size:1.1em; color:Tomato"></i>
-						<i class="fab fa-searchengin" style="font-size:1.1em; color:#CCCCCC"></i>
-						<i class="fab fa-searchengin" style="font-size:1.1em; color:#CCCCCC"></i>
+						<i class="fab fa-searchengin" style="font-size:1.1em; color:#FFFFFF"></i>
+						<i class="fab fa-searchengin" style="font-size:1.1em; color:#FFFFFF"></i>
+						<i class="fab fa-searchengin" style="font-size:1.1em; color:#FFFFFF"></i>
+						<i class="fab fa-searchengin" style="font-size:1.1em; color:#888888"></i>
+						<i class="fab fa-searchengin" style="font-size:1.1em; color:#888888"></i>
 					</div>
 					<div class="7u$">
 						Not too hard to play
@@ -219,31 +339,31 @@
 				</div>
 				<div class="row uniform">
 					<div class="5u" style="text-align:right">
-						<i class="fas fa-clock" style="font-size:1.05em; color:Tomato"></i>
-						<i class="fas fa-clock" style="font-size:1.05em; color:Tomato"></i>
-						<i class="fas fa-clock" style="font-size:1.05em; color:Tomato"></i>
-						<i class="far fa-clock" style="font-size:1.05em; color:#CCCCCC"></i>
-						<i class="far fa-clock" style="font-size:1.05em; color:#CCCCCC"></i>
+						<i class="fas fa-clock" style="font-size:1.05em; color:#FFFFFF"></i>
+						<i class="fas fa-clock" style="font-size:1.05em; color:#FFFFFF"></i>
+						<i class="fas fa-clock" style="font-size:1.05em; color:#FFFFFF"></i>
+						<i class="far fa-clock" style="font-size:1.05em; color:#888888"></i>
+						<i class="far fa-clock" style="font-size:1.05em; color:#888888"></i>
 					</div>
 					<div class="7u$">
 						About 20 min to finish
 					</div>
 				</div>
 			</div>
-		</div>
-	</a>
+	</div>
+</a>
 </article>
 <article class="styleComingSoon">
 	<span class="image">
-		<img src="images/pic02.jpg" alt=""/>
+		<img src="images/pic02.jpg" alt="" style="height: 15em"/>
 	</span>
 	<a href="https://www.instagram.com/escapehome.co/" target="_blank">
 		<h2>More Coming Soon!</h2>
 		<div class="content"></br>
 		<p>Want to know when a new guide is online? Click here and follow us on Instagram!</br>
 		<span class="icon style1 fa-instagram" style="font-size: 3.0em;"/></p>
-</div>
-</a>
+	</div>
+	</a>
 </article>
 </section>
 </div>
@@ -279,22 +399,19 @@ frmvalidator.addValidation("message", "req", "Please provide a message");
 <section>
 <h2>Follow Us!</h2>
 <ul class="icons">
-<li>
-<a href="https://www.facebook.com/escapehome.co/" target="_blank" class="icon style2 fa-facebook">
-	<span class="label">Facebook</span></a>
-</li>
+	<li><a href="https://twitter.com/EscapeHomeGuide" target="_blank" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
 <li>
 <a href="https://www.instagram.com/escapehome.co/" target="_blank" class="icon style2 fa-instagram">
-	<span class="label">Instagram</span></a>
+<span class="label">Instagram</span></a>
 </li>
 <li>
-<a href="mailto:escapehome.co@gmail.com?Subject=EscapeHome" class="icon style2 fa-envelope-o">
-	<span class="label">Email</span></a>
+<a href="mailto:feedback@escapehome.co?Subject=EscapeHome" class="icon style2 fa-envelope-o">
+<span class="label">Email</span></a>
 </li>
 </ul>
 </section>
 <ul class="copyright">
-<li>&copy; EscapeHome 2018. All rights reserved</li>
+<li>&copy; EscapeHome 2020. All rights reserved</li>
 <li>Design:
 <a href="http://html5up.net target=" _blank="_blank" "">HTML5 UP</a>
 </li>
@@ -318,6 +435,4 @@ is licensed by
 <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 <script src="assets/js/main.js"></script>
 
-</body>
-
-</html>
+</body></html>

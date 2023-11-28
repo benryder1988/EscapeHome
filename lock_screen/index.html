@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>EscapeHome - Lock Screen</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content = "width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />
+		<meta name="apple-mobile-web-app-title" content="EscapeHome" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<link rel="apple-touch-icon" href="apple-touch-icon-iphone.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="Logo512.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="Logo512.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="Logo512.png">
+
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115818861-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-115818861-1');
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+			        // iOS web app full screen hacks.
+			        if(window.navigator.standalone == true) {
+			                // make all link remain in web app mode.
+			                $('a').click(function() {
+			                        window.location = $(this).attr('href');
+			            return false;
+			                });
+			        }
+			});
+			</script>
+
+		<script>
+/* Get the documentElement (<html>) to display the page in fullscreen */
+var elem = document.documentElement;
+
+/* View in fullscreen */
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+	document.getElementById("SecretSetup").style.display = "none";
+	var secret = document.getElementById("SecretSetupMessage").value;
+	document.getElementById("SecretRevealMessage").innerHTML = secret
+
+	document.getElementById("PasswordSetup").style.display = "none";
+	document.getElementById("PasswordReveal").style.display = "inline";
+
+	document.getElementById("Button").innerHTML="Unlock";
+	document.getElementById("Button").onclick=reveal;
+
+	document.getElementById("homeLink").href = "javascript:";
+	document.getElementById("menu_holder").style.display = "none";
+	document.getElementById("footer").style.display = "none";
+	document.getElementById("lock_footer_first").style.display = "inline";
+
+	var noSleep = new NoSleep();
+	noSleep.enable();
+}
+
+function resetFooter() {
+	document.getElementById("lock_footer_first").style.display = "inline";
+	document.getElementById("lock_footer_second").style.display = "none";
+}
+
+function tryToClose() {
+	document.getElementById("lock_footer_first").style.display = "none";
+	document.getElementById("lock_footer_second").style.display = "inline";
+}
+
+function reveal() {
+	var guess = document.getElementById("PasswordRevealValue").value;
+	var password = document.getElementById("PasswordSetupValue").value;
+	if ( guess == password ) {
+		document.getElementById("Button").innerHTML="Unlocked!";
+		document.getElementById("SecretReveal").style.display = "inline";
+		document.getElementById("PasswordReveal").style.display = "none";
+		document.getElementById("Button").classList.remove("fa-lock");
+		document.getElementById("Button").classList.add("fa-unlock");
+		document.getElementById("homeLink").href = "../";
+		document.getElementById("menu_holder").style.display = "inline";
+	}
+	else {
+		shake(document.getElementById("Button"));
+	}
+}
+
+function shake(e) {
+	var time = 500;
+	var distance = 5;
+
+	var start = (new Date()).getTime();
+	animate();
+
+	function animate() {
+	    var now = (new Date()).getTime();
+	    // Get current time
+	    var elapsed = now - start;
+	    // How long since we started
+	    var fraction = elapsed / time;
+	    // What fraction of total time?
+	    if (fraction < 1) {
+	        var x = distance * Math.sin(fraction * 4 * Math.PI);
+	        e.style.left = x + "px";
+	        // We're aiming for a smooth 40 frames/second animation.
+	        setTimeout(animate, Math.min(25, time - elapsed));
+	    }
+   }
+}
+
+</script>
+	</head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+							<div class="row uniform">
+								<div class="6u 12u$(medium)"><a id="homeLink" href="../" class="logo">
+									<span class="symbol"><img src="../images/come-in2.svg" alt=""/></span>
+									<span class="title">EscapeHome</span>
+								</a></div>
+								<div class="6u$ 12u$(medium)" align="right"><a class="logo">
+									<span class="title">Lock Screen</span>
+								</a></div>
+
+
+							</div>
+
+
+								<!-- Nav -->
+									<nav id="menu_holder">
+										<ul>
+											<li><a href="#menu">Menu</a></li>
+										</ul>
+									</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="../">Home</a></li>
+							<li><a href="../lock_screen/">Lock Screen</a></li>
+							<li><a href="https://play.google.com/store/apps/details?id=co.escapehome.escapehome.app">Android App</a></li>
+							<li>
+								<a href="../../iphone_app/">iPhone & iPad App</a>
+							</li>
+							<li><a href="../hints_and_tips/">Hints & Tips</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<div class="row uniform" id="SecretSetup">
+								<div class="3u 12u$(medium)"><h2 align="center">Enter the secret message to hide:</h2></div>
+								<div class="8u 12u$(medium)"><input type="text" id="SecretSetupMessage"></div>
+								<div class="1u$ 12u$(medium)"></div>
+							</div>
+							<div class="row uniform" id="SecretReveal" style="display:none">
+								<div class="2u 12u$(medium)"></div>
+								<div class="8u 12u$(medium)"><h2 id="SecretRevealMessage" style="color:#64b5f6"></h2></br></div>
+								<div class="2u$ 12u$(medium)"></div>
+							</div>
+							<div class="row uniform" id="PasswordSetup">
+								<div class="3u 12u$(medium)"><h2 align="center">Enter a password for the lock screen:</h2></div>
+								<div class="8u 12u$(medium)"><input type="text" id="PasswordSetupValue"></div>
+								<div class="1u$ 12u$(medium)"></div>
+							</div>
+							<div class="row uniform" id="PasswordReveal" style="display:none">
+								<div class="2u 12u$(medium)"><h2 align="center">Password:</h2></div>
+								<div class="9u 12u$(medium)"><input type="text" id="PasswordRevealValue"></div>
+								<div class="1u$ 12u$(medium)"></div>
+							</div>
+							<div class="row uniform" id="ButtonDiv">
+								<div class="4u 12u$(medium)"></div>
+								<div class="4u 12u$(medium)"><a href="#" id="Button" onclick="openFullscreen()" class="button fit icon fa-lock">Lock the Screen!</a></div>
+								<div class="4u$ 12u$(medium)"></div>
+							</div>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>&copy; EscapeHome 2020. All rights reserved</li>
+								<li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+								<li>Icons made by <a href="http://www.freepik.com" target="_blank" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" target="_blank" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></li>
+							</ul>
+						</div>
+					</footer>
+
+					<footer id="lock_footer_first" style="position: fixed; left: 0; bottom: 0; width: 100%; background-color: #bbdefb; text-align: center; display:none; padding-top: 10px; padding-bottom: 10px;">
+						<div class="inner">
+						<div class="row uniform">
+							<div class="1u 12u$(medium)"></div>
+							<div class="7u 12u$(medium)"><p style="padding-top: 0.5em;">You can exit the lock screen at anytime by clicking this button</p></div>
+							<div class="3u 12u$(medium)"><a href="#" id="Button" onclick="tryToClose()" class="button fit">Cancel Game</a></div>
+							<div class="1u$ 12u$(medium)">
+						</div>
+					</div>
+				</div>
+				</footer>
+
+					<footer id="lock_footer_second" style="position: fixed; left: 0; bottom: 0; width: 100%; background-color: #bbdefb; text-align: center; display:none; padding-top: 10px; padding-bottom: 10px;">
+						<div class="inner">
+						<div class="row uniform">
+							<div class="2u 12u$(medium)"></div>
+							<div class="8u 12u$(medium)"><p>Are you sure you want to exit this EscapeHome game? The secrets and password will be lost!</p></div>
+							<div class="2u$ 12u$(medium)"></div>
+						</div>
+						<div class="row uniform">
+							<div class="1u 12u$(medium)"></div>
+							<div class="5u 12u$(medium)"><a href="#" id="Button" onclick="location.reload()" class="button fit">Quit and close</a></div>
+							<div class="5u 12u$(medium)"><a href="#" id="Button" onclick="resetFooter()" class="button fit">Keep playing!</a></div>
+							<div class="1u$ 12u$(medium)"></div>
+						</div>
+					</div>
+					</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/NoSleep.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

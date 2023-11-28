@@ -1,7 +1,7 @@
 <?php
 
 $errors = '';
-$myemail = 'escapehome.co@gmail.com';//<-----Put Your email address here.
+$myemail = 'feedback@escapehome.co';//<-----Put Your email address here.
 if(empty($_POST['name'])  ||
    empty($_POST['email']) ||
    empty($_POST['message']))
